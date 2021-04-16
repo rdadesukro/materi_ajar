@@ -3,10 +3,21 @@ package com.example.minggu_1.model;
 public class materi {
   private   String id;
     private String minggu;
-    public materi(String minggu, String id,String tgl) {
+
+    public String getJudul() {
+        return judul;
+    }
+
+    public void setJudul(String judul) {
+        this.judul = judul;
+    }
+
+    private String judul;
+    public materi(String minggu, String id,String tgl,String judul) {
         this.minggu = minggu;
         this.id = id;
         this.tgl = tgl;
+        this.judul = judul;
 
     }
     public String getId() {

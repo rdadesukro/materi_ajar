@@ -23,13 +23,20 @@ public class menu_materi_pertemuan extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_materi_pertemuan);
         initView();
-        for (int i = 0; i < 9; i++) {
-             myListData = new materi[]{
-                    new materi("Minggu Ke-"+i, ""+i,""),
-            };
 
-        }
-        adapter_materi adapter = new adapter_materi(this,generateSimpleList());
+        materi[] myListData = new materi[]{
+                new materi("Minggu Ke-1","","19-April-2021","Layout"),
+                new materi("Minggu Ke-2","","19-April-2021","Button,Toast,EditText"),
+                new materi("Minggu Ke-3","","19-April-2021","Intent put extra"),
+                new materi("Minggu Ke-4","","19-April-2021","Listview dan RecyclerView"),
+                new materi("Minggu Ke-5","","19-April-2021","Listview dan RecyclerView"),
+                new materi("Minggu Ke-6","","19-April-2021","Sqlite Database"),
+                new materi("Minggu Ke-7","","19-April-2021","Sqlite Database"),
+                new materi("Minggu Ke-8","","19-April-2021","Sqlite Database"),
+                new materi("Minggu Ke-9","","19-April-2021","Sqlite Database"),
+
+        };
+        adapter_materi adapter = new adapter_materi(this,myListData);
         rv.setHasFixedSize(true);
         rv.setLayoutManager(new LinearLayoutManager(this));
         rv.setAdapter(adapter);
@@ -39,7 +46,7 @@ public class menu_materi_pertemuan extends AppCompatActivity {
         List<materi> simpleViewModelList = new ArrayList<>();
 
         for (int i = 1; i <=9; i++) {
-            simpleViewModelList.add(new materi("Minggu Ke- "+i,""+i,""+i));
+//            simpleViewModelList.add(new materi("Minggu Ke- "+i,""+i,""+i));
         }
 
         return simpleViewModelList;

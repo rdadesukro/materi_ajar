@@ -1,6 +1,7 @@
 package com.example.minggu_1.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.minggu_1.MainActivity;
 import com.example.minggu_1.R;
 import com.example.minggu_1.model.materi;
 
@@ -20,10 +22,10 @@ public class adapter_materi  extends RecyclerView.Adapter<adapter_materi.ViewHol
 
     private List<materi> mList ;
     private Context ctx;
-
+    private materi[] listdata;
     // RecyclerView recyclerView;
-    public adapter_materi(Context ctx, List<materi> mList) {
-        this.mList = mList;
+    public adapter_materi(Context ctx, materi[] listdata) {
+        this.listdata = listdata;
         this.ctx = ctx;
     }
     @NonNull
@@ -37,13 +39,16 @@ public class adapter_materi  extends RecyclerView.Adapter<adapter_materi.ViewHol
 
     @Override
     public void onBindViewHolder(@NonNull adapter_materi.ViewHolder holder, int position) {
-        final materi myListData = mList.get(position);
-        holder.tgl.setText(myListData.getTgl());
-        holder.minggu.setText(myListData.getMinggu());
+
+        final materi myListData = listdata[position];
+        holder.tgl.setText(listdata[position].getTgl());
+        holder.minggu.setText(listdata[position].getMinggu());
+        holder.judul.setText(listdata[position].getJudul());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(),"click on item: "+myListData.getId(),Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(ctx, MainActivity.class);
+                ctx.startActivity(intent);
             }
         });
     }
@@ -51,14 +56,15 @@ public class adapter_materi  extends RecyclerView.Adapter<adapter_materi.ViewHol
     @Override
     public int getItemCount()
     {
-        return mList.size();
+        return listdata.length;
     }
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView minggu,tgl;
+        public TextView minggu,tgl,judul;
         public CardView cardView;
         public ViewHolder(View itemView) {
             super(itemView);
             this.minggu = (TextView) itemView.findViewById(R.id.txt_minggu);
+            this.judul = (TextView) itemView.findViewById(R.id.txt_judul);
             this.tgl = (TextView) itemView.findViewById(R.id.txt_tgl);
             this.cardView = (CardView) itemView.findViewById(R.id.card);
         }
