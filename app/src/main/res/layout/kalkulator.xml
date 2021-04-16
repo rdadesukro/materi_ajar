@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kalkulator">
+
+    <Button
+        android:id="@+id/btn_kurang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_tambah"
+        app:layout_constraintEnd_toStartOf="@+id/btn_kali"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_tambah"
+        app:layout_constraintTop_toTopOf="@+id/btn_tambah" />
+
+    <Button
+        android:id="@+id/btn_tambah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="+"
+        app:layout_constraintEnd_toStartOf="@+id/btn_kurang"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_haslil" />
+
+    <Button
+        android:id="@+id/btn_kali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="x"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_kurang"
+        app:layout_constraintEnd_toStartOf="@+id/btn_bagi"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_kurang"
+        app:layout_constraintTop_toTopOf="@+id/btn_kurang" />
+
+    <EditText
+        android:id="@+id/edit_dua"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Angka Dua"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edit_satu"
+        app:layout_constraintStart_toStartOf="@+id/edit_satu"
+        app:layout_constraintTop_toBottomOf="@+id/edit_satu" />
+
+    <Button
+        android:id="@+id/btn_bagi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="/"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_kali"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_kali"
+        app:layout_constraintTop_toTopOf="@+id/btn_kali" />
+
+    <EditText
+        android:id="@+id/edit_satu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Angka Satu"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_haslil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Hasil"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/edit_dua"
+        app:layout_constraintStart_toStartOf="@+id/edit_dua"
+        app:layout_constraintTop_toBottomOf="@+id/edit_dua" />
+</androidx.constraintlayout.widget.ConstraintLayout>
