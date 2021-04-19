@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -39,16 +40,16 @@ public class kalkulator extends AppCompatActivity {
 
 
 
-        btnTambah.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                a = Float.parseFloat(editSatu.getText() + "");
-                b = Float.parseFloat(editDua.getText() + "");
-                txtHaslil.setText(a+b+"");
-
-
-            }
-        });
+//        btnTambah.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                a = Float.parseFloat(editSatu.getText() + "");
+//                b = Float.parseFloat(editDua.getText() + "");
+//                txtHaslil.setText(a+b+"");
+//
+//
+//            }
+//        });
         btnBagi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,5 +76,8 @@ public class kalkulator extends AppCompatActivity {
                 txtHaslil.setText(a-b+"");
             }
         });
+    }
+    public void btn_tambah (View v){
+        Toast.makeText(this, "tamabah", Toast.LENGTH_SHORT).show();
     }
 }

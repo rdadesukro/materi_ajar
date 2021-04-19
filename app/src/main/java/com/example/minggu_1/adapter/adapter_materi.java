@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.minggu_1.MainActivity;
 import com.example.minggu_1.R;
 import com.example.minggu_1.crud;
+import com.example.minggu_1.kalkulator;
 import com.example.minggu_1.model.materi;
 
 import java.util.List;
@@ -52,7 +53,8 @@ public class adapter_materi  extends RecyclerView.Adapter<adapter_materi.ViewHol
                     Intent intent = new Intent(ctx, MainActivity.class);
                     ctx.startActivity(intent);
                 }else if (position==1){
-
+                    Intent intent = new Intent(ctx, kalkulator.class);
+                    ctx.startActivity(intent);
                 }else if (position==2){
 
                 }else if (position==3){
