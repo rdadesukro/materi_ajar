@@ -252,7 +252,8 @@
                                         android:layout_marginTop="16dp"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent"
-                                        app:srcCompat="@drawable/ic_baseline_library_books_24" />
+                                        app:srcCompat="@drawable/ic_baseline_library_books_24"
+                                        android:layout_marginLeft="8dp" />
 
                                     <ImageView
                                         android:id="@+id/imageView17"
