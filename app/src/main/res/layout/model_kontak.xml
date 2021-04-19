@@ -26,45 +26,43 @@
 
             <TextView
                 android:id="@+id/txt_judul"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
                 android:fontFamily="@font/opensanslight"
-                android:text="Liner Layout"
+                android:text="Jambi"
                 android:textColor="@color/grey_900"
                 android:textSize="@dimen/_12sdp"
-                app:layout_constraintBottom_toTopOf="@+id/txt_tgl"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/txt_minggu"
                 app:layout_constraintTop_toBottomOf="@+id/txt_minggu" />
 
             <ImageView
                 android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
-                android:tint="@color/yellow_700"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_baseline_library_books_24"
+                app:srcCompat="@drawable/man"
                 tools:ignore="UseAppTint,VectorDrawableCompat" />
 
             <TextView
                 android:id="@+id/txt_tgl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
-                android:fontFamily="@font/opensansregular"
-                android:text="12 Oktober 2020"
+                android:textColor="@color/grey_900"
+                android:fontFamily="@font/opensansbold"
+                android:text="Online"
                 android:textSize="@dimen/_8sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_judul" />
 
             <TextView
                 android:id="@+id/txt_minggu"
@@ -73,7 +71,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:fontFamily="@font/opensansbold"
-                android:text="Minggu Ke-1"
+                android:text="Budi Santoso"
                 android:textColor="@color/grey_900"
                 android:textSize="@dimen/_14sdp"
                 app:layout_constraintStart_toEndOf="@+id/imageView4"

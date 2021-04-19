@@ -5,49 +5,46 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.minggu_1.MainActivity;
 import com.example.minggu_1.R;
 import com.example.minggu_1.crud;
-import com.example.minggu_1.kalkulator;
 import com.example.minggu_1.materi.minggu_ke_1;
 import com.example.minggu_1.materi.minggu_ke_2;
 import com.example.minggu_1.materi.minggu_ke_3;
-import com.example.minggu_1.materi.minggu_ke_4;
-import com.example.minggu_1.materi.minggu_ke_5;
+import com.example.minggu_1.model.kontak;
 import com.example.minggu_1.model.materi;
 
 import java.util.List;
 
-public class adapter_materi  extends RecyclerView.Adapter<adapter_materi.ViewHolder> {
+public class adapter_rv extends RecyclerView.Adapter<adapter_rv.ViewHolder> {
 
     private List<materi> mList ;
     private Context ctx;
-    private materi[] listdata;
+    private kontak[] listdata;
     // RecyclerView recyclerView;
-    public adapter_materi(Context ctx, materi[] listdata) {
+    public adapter_rv(Context ctx, kontak[] listdata) {
         this.listdata = listdata;
         this.ctx = ctx;
     }
     @NonNull
     @Override
-    public adapter_materi.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public adapter_rv.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View listItem= layoutInflater.inflate(R.layout.model_materi, parent, false);
+        View listItem= layoutInflater.inflate(R.layout.model_kontak, parent, false);
         ViewHolder viewHolder = new ViewHolder(listItem);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull adapter_materi.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull adapter_rv.ViewHolder holder, int position) {
 
-        final materi myListData = listdata[position];
+        final kontak myListData = listdata[position];
         holder.tgl.setText(listdata[position].getTgl());
         holder.minggu.setText(listdata[position].getMinggu());
         holder.judul.setText(listdata[position].getJudul());
@@ -63,17 +60,10 @@ public class adapter_materi  extends RecyclerView.Adapter<adapter_materi.ViewHol
                 }else if (position==2){
                     Intent intent = new Intent(ctx, minggu_ke_3.class);
                     ctx.startActivity(intent);
-                }else if (position==3){
-                    Intent intent = new Intent(ctx,  minggu_ke_4.class);
-                    ctx.startActivity(intent);
-                }else if (position==4){
-                    Intent intent = new Intent(ctx,  minggu_ke_5.class);
-                    ctx.startActivity(intent);
-                }else {
+                }else{
                     Intent intent = new Intent(ctx, crud.class);
                     ctx.startActivity(intent);
                 }
-
 
             }
         });
@@ -87,10 +77,12 @@ public class adapter_materi  extends RecyclerView.Adapter<adapter_materi.ViewHol
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView minggu,tgl,judul;
         public CardView cardView;
+        public ImageView imageView;
         public ViewHolder(View itemView) {
             super(itemView);
             this.minggu = (TextView) itemView.findViewById(R.id.txt_minggu);
             this.judul = (TextView) itemView.findViewById(R.id.txt_judul);
+            this.imageView = (ImageView) itemView.findViewById(R.id.imageView4);
             this.tgl = (TextView) itemView.findViewById(R.id.txt_tgl);
             this.cardView = (CardView) itemView.findViewById(R.id.card);
         }
