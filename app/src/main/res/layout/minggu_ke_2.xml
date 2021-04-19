@@ -16,6 +16,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="10"
+        android:textSize="@dimen/_12sdp"
         android:hint="Siapakah nama presiden indonesia sekrang?"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
