@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" >
+    <androidx.cardview.widget.CardView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:backgroundTint="@color/yellow_700"
+        android:layout_height="100dp"
+        android:hint="@string/nama" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dates"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/grey_40"
+        android:layout_below="@id/name"
+
+        android:autofillHints="12-feb-2021"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/times" />
+    <androidx.cardview.widget.CardView
+        android:id="@id/times"
+        android:layout_width="96dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/warna5"
+        android:layout_below="@id/name"
+        android:layout_alignParentRight="true" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="96dp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:backgroundTint="@color/yellow_700"
+        android:layout_below="@id/times"
+        android:layout_alignParentRight="true"
+        android:text="@string/done" />
+</RelativeLayout>

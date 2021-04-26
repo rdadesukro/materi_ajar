@@ -67,7 +67,7 @@ dependencies {
 
     //foto
     implementation 'com.github.bumptech.glide:glide:4.9.0'
-    // annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    // annotationProcessor 'com.github.bumptech.glide:compiler:b4.9.0'
 
     //lokasi
     //noinspection GradleCompatible
@@ -124,6 +124,10 @@ dependencies {
 
     //apk apdate
 //    implementation 'com.github.javiersantos:AppUpdater:2.7'
+
+    //smarttablaout
+    implementation 'com.ogaclejapan.smarttablayout:library:2.0.0@aar'
+
 
 
 

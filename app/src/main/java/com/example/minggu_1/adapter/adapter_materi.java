@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.minggu_1.MainActivity;
 import com.example.minggu_1.R;
 import com.example.minggu_1.crud;
+import com.example.minggu_1.fragment.menu_materi_layout;
 import com.example.minggu_1.kalkulator;
 import com.example.minggu_1.materi.minggu_ke_1;
 import com.example.minggu_1.materi.minggu_ke_2;
@@ -55,7 +56,7 @@ public class adapter_materi  extends RecyclerView.Adapter<adapter_materi.ViewHol
             @Override
             public void onClick(View view) {
                 if (position==0){
-                    Intent intent = new Intent(ctx, minggu_ke_1.class);
+                    Intent intent = new Intent(ctx, menu_materi_layout.class);
                     ctx.startActivity(intent);
                 }else if (position==1){
                     Intent intent = new Intent(ctx, minggu_ke_2.class);

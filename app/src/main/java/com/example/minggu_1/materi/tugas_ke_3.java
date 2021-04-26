@@ -16,7 +16,7 @@ public class tugas_ke_3 extends AppCompatActivity {
     TextView grade;
     Button cek;
 
-    float tampung_nilai;
+    int tampung_nilai;
     String tampung_nama;
 
     @Override
@@ -32,22 +32,32 @@ public class tugas_ke_3 extends AppCompatActivity {
         cek.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              tampung_nilai = Float.parseFloat(nilai.getText()+ "");
-                tampung_nama = nama.getText().toString().trim();
 
-                if (tampung_nilai>=80||tampung_nilai<=100){
-                    grade.setText("Selamat "+tampung_nama+" Nilai anda sangat memuaskan dengan grade A");
-                }else if (tampung_nilai>=70||tampung_nilai<=79){
-                    grade.setText("Selamat "+tampung_nama+" Nilai anda  memuaskan dengan grade B+");
-                }else if (tampung_nilai>=60||tampung_nilai<=69){
-                    grade.setText("Selamat "+tampung_nama+" Nilai anda Cukup memuaskan dengan grade B");
-                }else if (tampung_nilai>=50||tampung_nilai<=59){
-                    grade.setText("Selamat "+tampung_nama+" Nilai anda Cukup memuaskan dengan grade C+");
-                }else if (tampung_nilai>=40||tampung_nilai<=49){
-                    grade.setText("Selamat "+tampung_nama+" Nilai anda Cukup memuaskan dengan grade C");
-                }else {
-                    grade.setText("Selamat "+tampung_nama+" Nilai anda Cukup memuaskan dengan grade E");
+                if (nama.getText().toString().trim().equals("")){
+                    nama.setError("Tidak Boleh Kosong");
                 }
+                if (nilai.getEditableText().toString().trim().equals("")){
+                    nilai.setError("Tidak Boleh Kosong");
+                }else {
+                    tampung_nilai = Integer.parseInt(nilai.getText().toString());
+                    tampung_nama = nama.getText().toString().trim();
+                    if (tampung_nilai>=80 && tampung_nilai<=100){
+                        grade.setText("Selamat "+tampung_nama+" Nilai anda sangat memuaskan dengan grade A");
+                    }else if (tampung_nilai>=70&&tampung_nilai<=79){
+                        grade.setText("Selamat "+tampung_nama+" Nilai anda  memuaskan dengan grade B+");
+                    }else if (tampung_nilai>=60&&tampung_nilai<=69){
+                        grade.setText("Selamat "+tampung_nama+" Nilai anda Cukup memuaskan dengan grade B");
+                    }else if (tampung_nilai>=50&&tampung_nilai<=59){
+                        grade.setText("Selamat "+tampung_nama+" Nilai anda Cukup memuaskan dengan grade C+");
+                    }else if (tampung_nilai>=40&&tampung_nilai<=49){
+                        grade.setText("Selamat "+tampung_nama+" Nilai anda Cukup memuaskan dengan grade C");
+                    }else {
+                        grade.setText("Selamat "+tampung_nama+" Nilai anda Cukup memuaskan dengan grade E");
+                    }
+                }
+
+
+
             }
         });
 
