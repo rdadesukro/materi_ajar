@@ -52,7 +52,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Angka Dua"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/edit_satu"
         app:layout_constraintStart_toStartOf="@+id/edit_satu"
         app:layout_constraintTop_toBottomOf="@+id/edit_satu" />

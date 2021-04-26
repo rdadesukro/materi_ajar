@@ -2,6 +2,7 @@ package com.example.minggu_1.materi;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,6 +36,7 @@ public class minggu_ke_3 extends AppCompatActivity {
         editKonfir = findViewById(R.id.edit_konfir);
     }
     public void btn_register(View v){
+
 
         if (editUsername.getText().toString().equals("")) {
             Toast.makeText(this, "Username Tidak Boleh Kosong", Toast.LENGTH_SHORT).show();

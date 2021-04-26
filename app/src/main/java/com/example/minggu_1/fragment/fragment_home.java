@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.minggu_1.R;
 import com.example.minggu_1.menu.menu_materi_pertemuan;
+import com.example.minggu_1.menu.menu_tugas;
 
 import butterknife.ButterKnife;
 
@@ -71,6 +72,13 @@ public class fragment_home extends Fragment {
             public void onClick(View v) {
                 Intent materi = new Intent(getActivity(), menu_materi_pertemuan.class);
                startActivity(materi);
+            }
+        });
+        cardTugas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent materi = new Intent(getActivity(), menu_tugas.class);
+                startActivity(materi);
             }
         });
     }

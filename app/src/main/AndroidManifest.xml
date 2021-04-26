@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".materi.minggu_ke_5"></activity>
+        <activity android:name=".materi.tugas_ke_3"></activity>
+        <activity android:name=".materi.tugas_ke_1" />
+        <activity android:name=".materi.tugas_ke_2" />
+        <activity android:name=".menu.menu_tugas" />
+        <activity android:name=".materi.minggu_ke_5" />
         <activity android:name=".materi.minggu_ke_3_2" />
         <activity android:name=".materi.minggu_ke_4" />
         <activity android:name=".materi.minggu_ke_3" />
