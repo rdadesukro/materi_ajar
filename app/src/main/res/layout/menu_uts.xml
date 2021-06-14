@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".materi.menu_uts">
+
+    <Button
+        android:id="@+id/btn_simpan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Simpan"
+        app:layout_constraintEnd_toEndOf="@+id/edit_nama6"
+        app:layout_constraintStart_toStartOf="@+id/edit_nama6"
+        app:layout_constraintTop_toBottomOf="@+id/edit_nama6" />
+
+    <EditText
+        android:id="@+id/edit_nama6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Konfirmasi Pssword"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edit_password"
+        app:layout_constraintStart_toStartOf="@+id/edit_password"
+        app:layout_constraintTop_toBottomOf="@+id/edit_password" />
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edit_no_hp"
+        app:layout_constraintStart_toStartOf="@+id/edit_no_hp"
+        app:layout_constraintTop_toBottomOf="@+id/edit_no_hp" />
+
+    <EditText
+        android:id="@+id/edit_no_hp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="No Hp"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edit_pekerjaan"
+        app:layout_constraintStart_toStartOf="@+id/edit_pekerjaan"
+        app:layout_constraintTop_toBottomOf="@+id/edit_pekerjaan" />
+
+    <EditText
+        android:id="@+id/edit_pekerjaan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Pekerjaan"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edit_alaamat"
+        app:layout_constraintStart_toStartOf="@+id/edit_alaamat"
+        app:layout_constraintTop_toBottomOf="@+id/edit_alaamat" />
+
+    <EditText
+        android:id="@+id/edit_alaamat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Alamat"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edit_nama"
+        app:layout_constraintStart_toStartOf="@+id/edit_nama"
+        app:layout_constraintTop_toBottomOf="@+id/edit_nama" />
+
+    <EditText
+        android:id="@+id/edit_nama"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Nama Lengkap"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

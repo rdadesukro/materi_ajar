@@ -23,17 +23,20 @@ public class minggu_ke_3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.minggu_3);
-        initView();
+
+
+        btnRegister = findViewById(R.id.btn_register);
+        editUsername = findViewById(R.id.edit_username);
+        editPassword = findViewById(R.id.edit_password);
+        editKonfir = findViewById(R.id.edit_konfir);
+//        initView();
 
 
 
     }
 
     private void initView() {
-        btnRegister = findViewById(R.id.btn_register);
-        editUsername = findViewById(R.id.edit_username);
-        editPassword = findViewById(R.id.edit_password);
-        editKonfir = findViewById(R.id.edit_konfir);
+
     }
     public void btn_register(View v){
 
@@ -47,8 +50,6 @@ public class minggu_ke_3 extends AppCompatActivity {
             Toast.makeText(this, "Konfirmasi Password Tidak Boleh Kosong", Toast.LENGTH_SHORT).show();
         } else if (editPassword.getText().toString().trim().equals(editKonfir.getText().toString().trim())){
             Intent intent = new Intent(this, minggu_ke_3_2.class);
-            String user_name = editUsername.getText().toString().trim();
-            intent.putExtra("USER_NAME", user_name);
             startActivity(intent);
         }else {
             Toast.makeText(this, "Password dan Konfirmasi Password Tidak Sama", Toast.LENGTH_SHORT).show();

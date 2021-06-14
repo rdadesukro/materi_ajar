@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".materi.tugas_ke_3"></activity>
+        <activity android:name=".materi.menu_utama_uts"></activity>
+        <activity android:name=".materi.menu_uts" />
+        <activity android:name=".materi.tugas_ke_3" />
         <activity android:name=".materi.tugas_ke_1" />
         <activity android:name=".materi.tugas_ke_2" />
         <activity android:name=".menu.menu_tugas" />
@@ -20,14 +22,13 @@
         <activity android:name=".materi.minggu_ke_3" />
         <activity android:name=".materi.minggu_ke_2" />
         <activity android:name=".materi.minggu_ke_1" />
-        <activity android:name=".menu.menu_materi_pertemuan" />
-        <activity android:name=".kalkulator" />
+        <activity android:name=".menu.menu_materi_pertemuan" /> <!-- <activity android:name=".kalkulator" /> -->
         <activity
             android:name=".MainActivity"
             android:label="Pertemuan" />
         <activity android:name=".AddEdit" />
         <activity android:name=".crud" />
-        <activity android:name=".fragment.menu_utama">
+        <activity android:name=".kalkulator">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

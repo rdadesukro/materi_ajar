@@ -25,10 +25,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Button"
+        android:onClick="btn_simpan"
+        android:text="SIMPAN"
         app:layout_constraintEnd_toEndOf="@+id/edit_nilai"
         app:layout_constraintStart_toStartOf="@+id/edit_nilai"
-        app:layout_constraintTop_toBottomOf="@+id/edit_nilai" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_nilai"
+        tools:ignore="OnClick" />
 
     <EditText
         android:id="@+id/edit_nilai"

@@ -19,16 +19,13 @@ public class kalkulator extends AppCompatActivity {
     private EditText editSatu;
     private TextView txtHaslil;
 
-    float a,b,c;
+    float a,b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kalkulator);
-        initView();
-    }
-
-    private void initView() {
+//        initView();
         btnKurang = findViewById(R.id.btn_kurang);
         btnTambah = findViewById(R.id.btn_tambah);
         btnKali = findViewById(R.id.btn_kali);
@@ -36,48 +33,31 @@ public class kalkulator extends AppCompatActivity {
         btnBagi = findViewById(R.id.btn_bagi);
         editSatu = findViewById(R.id.edit_satu);
         txtHaslil = findViewById(R.id.txt_haslil);
-
-
-
-
-//        btnTambah.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                a = Float.parseFloat(editSatu.getText() + "");
-//                b = Float.parseFloat(editDua.getText() + "");
-//                txtHaslil.setText(a+b+"");
-//
-//
-//            }
-//        });
-        btnBagi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                a = Float.parseFloat(editSatu.getText() + "");
-                b = Float.parseFloat(editDua.getText() + "");
-                txtHaslil.setText(a/b+"");
-            }
-        });
-
-        btnKali.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                a = Float.parseFloat(editSatu.getText() + "");
-                b = Float.parseFloat(editDua.getText() + "");
-                txtHaslil.setText(a*b+"");
-            }
-        });
-
-        btnKurang.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                a = Float.parseFloat(editSatu.getText() + "");
-                b = Float.parseFloat(editDua.getText() + "");
-                txtHaslil.setText(a-b+"");
-            }
-        });
     }
+
+
     public void btn_tambah (View v){
-        Toast.makeText(this, "tamabah", Toast.LENGTH_SHORT).show();
+
+                a = Float.parseFloat(editSatu.getText() + "");
+                b = Float.parseFloat(editDua.getText() + "");
+                txtHaslil.setText(a+b+"");
+    }
+
+    public void btn_kurang(View view) {
+        a = Float.parseFloat(editSatu.getText() + "");
+        b = Float.parseFloat(editDua.getText() + "");
+        txtHaslil.setText(a-b+"");
+    }
+
+    public void btn_kali(View view) {
+        a = Float.parseFloat(editSatu.getText() + "");
+        b = Float.parseFloat(editDua.getText() + "");
+        txtHaslil.setText(a*b+"");
+    }
+
+    public void btn_bagi(View view) {
+        a = Float.parseFloat(editSatu.getText() + "");
+        b = Float.parseFloat(editDua.getText() + "");
+        txtHaslil.setText(a/b+"");
     }
 }

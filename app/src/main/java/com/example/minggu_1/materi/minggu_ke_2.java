@@ -16,18 +16,23 @@ public class minggu_ke_2 extends AppCompatActivity {
     Button btn_jawab;
     EditText edit_jaawab;
 
+    String nama;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.minggu_ke_2);
 
-        btn_jawab = findViewById(R.id.btn_jawab);
+        btn_jawab = findViewById(R.id.bt);
         edit_jaawab =findViewById(R.id.edit_nama);
 
         btn_jawab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (edit_jaawab.getText().toString().equals("jokowi")){
+                nama = edit_jaawab.getText().toString().trim();
+                if (nama.equals("jokowi")){
+
+
                     Toast.makeText(minggu_ke_2.this, "Jawaban anda Benar", Toast.LENGTH_LONG).show();
                 }else {
                     Toast.makeText(minggu_ke_2.this, "Jawaban anda Salah", Toast.LENGTH_SHORT).show();
