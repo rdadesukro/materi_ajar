@@ -1,5 +1,6 @@
 package com.example.minggu_1.materi;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -74,9 +75,12 @@ public class menu_uts extends AppCompatActivity {
             Toast.makeText(this, "konfirmasi pasword tidak sama", Toast.LENGTH_SHORT).show();
 
         }else {
-            Toast.makeText(this, "berhasil", Toast.LENGTH_SHORT).show();
-
-
+            Intent i = new Intent(menu_uts.this,menu_utama_uts.class);
+            i.putExtra("nama",nama);
+            i.putExtra("alamat",alamat);
+            i.putExtra("no_hp",no_hp);
+            i.putExtra("pekerjaan",pekerjaan);
+            startActivity(i);
         }
 
 
