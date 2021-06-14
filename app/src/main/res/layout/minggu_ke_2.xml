@@ -18,7 +18,7 @@
         android:ems="10"
         android:textSize="@dimen/_12sdp"
         android:hint="Siapakah nama presiden indonesia sekrang?"
-        android:inputType="textPersonName"
+        android:inputType="textCapSentences|textCapWords"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

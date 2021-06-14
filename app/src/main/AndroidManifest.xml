@@ -23,12 +23,12 @@
         <activity android:name=".materi.minggu_ke_2" />
         <activity android:name=".materi.minggu_ke_1" />
         <activity android:name=".menu.menu_materi_pertemuan" /> <!-- <activity android:name=".kalkulator" /> -->
-        <activity
-            android:name=".MainActivity"
-            android:label="Pertemuan" />
+<!--        <activity-->
+<!--            android:name=".MainActivity"-->
+<!--            android:label="Pertemuan" />-->
         <activity android:name=".AddEdit" />
         <activity android:name=".crud" />
-        <activity android:name=".kalkulator">
+        <activity android:name=".fragment.menu_utama">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

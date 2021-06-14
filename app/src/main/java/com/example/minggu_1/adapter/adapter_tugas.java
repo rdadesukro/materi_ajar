@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.minggu_1.R;
 import com.example.minggu_1.crud;
+import com.example.minggu_1.materi.menu_uts;
 import com.example.minggu_1.materi.tugas_ke_2;
 import com.example.minggu_1.materi.minggu_ke_3;
 import com.example.minggu_1.materi.minggu_ke_4;
@@ -63,7 +64,7 @@ public class adapter_tugas extends RecyclerView.Adapter<adapter_tugas.ViewHolder
                     Intent intent = new Intent(ctx, tugas_ke_3.class);
                     ctx.startActivity(intent);
                 }else if (position==3){
-                    Intent intent = new Intent(ctx,  minggu_ke_4.class);
+                    Intent intent = new Intent(ctx,  menu_uts.class);
                     ctx.startActivity(intent);
                 }else if (position==4){
                     Intent intent = new Intent(ctx,  minggu_ke_5.class);

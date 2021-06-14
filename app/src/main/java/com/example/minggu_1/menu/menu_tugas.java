@@ -24,6 +24,7 @@ public class menu_tugas extends AppCompatActivity {
                 new materi("TUGAS KE-1","","19-April-2021","INTENT"),
                 new materi("TUGAS KE-2","","19-April-2021","LOGIKA IF"),
                 new materi("TUGAS KE-3","","19-April-2021","INTENT DAN FUNGSI IF"),
+                new materi("UTS","","14-juni-2021","UTS"),
 
         };
         adapter_tugas adapter = new adapter_tugas(this,myListData);
