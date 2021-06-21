@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.minggu_1.R;
 
+import com.example.minggu_1.R;
+
 public class menu_utama_uts extends AppCompatActivity {
 
 
