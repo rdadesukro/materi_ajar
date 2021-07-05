@@ -7,5 +7,7 @@
     <string name="ade">ade</string>
     <string name="nama">Nama</string>
     <string name="done">done</string>
+    <string name="enter_number">number</string>
+    <string name="enter_name">name</string>
 
 </resources>

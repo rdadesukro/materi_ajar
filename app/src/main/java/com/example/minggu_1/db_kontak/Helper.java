@@ -14,9 +14,9 @@ import java.util.HashMap;
 public class Helper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 2;
 
-    static final String DATABASE_NAME = "kuncorosqlite.db";
+    static final String DATABASE_NAME = "siswa";
 
-    public static final String TABLE_SQLite = "sqlite";
+    public static final String TABLE_SQLite = "konta";
 
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_NAME = "name";
