@@ -32,11 +32,9 @@ public class minggu_ke_4 extends AppCompatActivity {
                 new kontak("Mapan","","Online","Jambi",android.R.drawable.ic_delete),
                 new kontak("Hadir","","Offlie","Jambi",android.R.drawable.ic_delete),
 
-
-
-
-
         };
+
+
         adapter_rv adapter = new adapter_rv(this,myListData);
         rv.setHasFixedSize(true);
         rv.setLayoutManager(new LinearLayoutManager(this));

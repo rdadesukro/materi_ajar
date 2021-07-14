@@ -36,7 +36,7 @@ public class crud extends AppCompatActivity implements adapter_sqlite.OnImageCli
     private RecyclerView rv;
     private ArrayList<konta_new> allContacts=new ArrayList<>();
     com.example.minggu_1.adapter.adapter_sqlite adapter;
-    Helper SQLite = new Helper(this);
+   // Helper SQLite = new Helper(this);
 
     public static final String TAG_ID = "id";
     public static final String TAG_NAME = "name";
@@ -46,7 +46,7 @@ public class crud extends AppCompatActivity implements adapter_sqlite.OnImageCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crud);
-        SQLite = new Helper(getApplicationContext());
+      //  SQLite = new Helper(getApplicationContext());
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingActionButton);
         rv = (RecyclerView) findViewById(R.id.rv);
@@ -61,9 +61,10 @@ public class crud extends AppCompatActivity implements adapter_sqlite.OnImageCli
 
         } else {
 
-            Toast.makeText(this, "There is no contact in the database. Start adding now", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Data Tidak Ada", Toast.LENGTH_LONG).show();
         }
         fab.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 addTaskDialog();
@@ -145,12 +146,6 @@ public class crud extends AppCompatActivity implements adapter_sqlite.OnImageCli
                     finish();
                     startActivity(getIntent());
 
-
-//
-//                    mDatabase.updateContacts(new konta_new(konta_new.getId(), name, ph_no));
-//                    //refresh the activity
-//                     finish();
-//                    startActivity(getIntent());
                 }
             }
         });

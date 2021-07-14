@@ -72,6 +72,7 @@ public class adapter_rv extends RecyclerView.Adapter<adapter_rv.ViewHolder> {
     @Override
     public int getItemCount()
     {
+
         return listdata.length;
     }
     public static class ViewHolder extends RecyclerView.ViewHolder {

@@ -23,10 +23,15 @@ import java.util.ArrayList;
 
 public class adapter_sqlite extends RecyclerView.Adapter<adapter_sqlite.ViewHolder> {
 
-    private ArrayList<konta_new> mList ;
+
     private Context ctx;
+
+
     private SqliteDatabase mDatabase;
     private OnImageClickListener onImageClickListener;
+    private ArrayList<konta_new> mList ;
+
+
     public adapter_sqlite(Context ctx, ArrayList<konta_new> listContacts ,OnImageClickListener onImageClickListener) {
         this.mList = listContacts;
         this.ctx = ctx;
@@ -65,8 +70,7 @@ public class adapter_sqlite extends RecyclerView.Adapter<adapter_sqlite.ViewHold
         return mList.size();
     }
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView nama,adres,judul;
-        public CardView cardView;
+        public TextView nama,adres;
         public ImageView edit,hapus;
 
         konta_new konta_new;
@@ -77,6 +81,8 @@ public class adapter_sqlite extends RecyclerView.Adapter<adapter_sqlite.ViewHold
             this.edit = (ImageView) itemView.findViewById(R.id.btn_edit);
             this.nama = (TextView) itemView.findViewById(R.id.name);
             this.adres = (TextView) itemView.findViewById(R.id.address);
+
+
 
             hapus.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -90,6 +96,7 @@ public class adapter_sqlite extends RecyclerView.Adapter<adapter_sqlite.ViewHold
             edit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    onImageClickListener.edit(konta_new,"","");
                     onImageClickListener.edit(konta_new,konta_new.getName(),konta_new.getPhno());
 //
                 }

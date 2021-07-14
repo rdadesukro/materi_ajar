@@ -1,6 +1,8 @@
 package com.example.minggu_1.model;
 
 public class kontak {
+
+
   private   String id;
     private String minggu;
 

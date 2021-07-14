@@ -16,6 +16,11 @@ public class konta_new {
         this.phno = phno;
     }
 
+
+
+
+
+
     public int getId() {
         return id;
     }
